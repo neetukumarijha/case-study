@@ -1,0 +1,101 @@
+<!-- <p>customerratings works!</p> -->
+<!-- <app-header></app-header>
+
+
+<!DOCTYPE html>
+<html>
+<body> 
+
+<h2>Rate us Your Experience</h2>
+<form [formGroup]= "ratingForm">
+  <label for="fname">FeedBack ID</label><br>
+  <input type="number" id="feedbackid" name="feedbackid"><br>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="cars">Choose a rating number:</label>
+
+  <select name="rating_value" id="rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+  <br><br>
+  <label for="comments">FeedBack Comments:</label><br>
+  <input type="text" id="comments" name="comments"br><br>
+  <input type="submit" (click)="carRating()" value="Submit">
+</form> 
+
+
+</body>
+
+
+<app-footer></app-footer> -->
+
+
+
+
+
+<app-header></app-header>
+<body style="background-image: url('assets/hexBG.jpg');">
+  <form [formGroup]="ratingForm" >
+   <div style="margin-left: 8%; padding-top: 5%;">
+      <h4 >Ratings form for <strong style="color: #66B2FF;">Customer</strong></h4>
+      <p >Please fill in this form to rating our service.</p>
+       
+      <!-- <div class="form-group">
+      <label for="feedbackid">FeedBack ID</label><br>
+      <input type="number" formControlName="FeedbackId" id="feedbackid" name="feedbackid">
+      <span *ngIf="isValid('FeedbackId')">ID is required</span>
+      <br>
+      </div> -->
+
+      <div class="form-group">
+        <label for="fname">First name:</label><br>
+      <input type="text" formControlName="FirstName" id="fname" name="fname"><br>
+      <span *ngIf="isValid('FirstName')">Name is required</span>
+      <br>
+      </div>
+
+      <div class="form-group">
+      <label for="cars">Choose a rating number:</label>
+       <select name="rating_value" id="rating" formControlName="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+       </select>  
+       <span *ngIf="isValid('Rating')">Name is required</span>
+      <br><br>
+      </div> 
+
+      <div class="form-group">
+      <label for="comments">FeedBack Comments:</label><br>
+      <input type="text" formControlName="Comments" id="comments" name="comments"br><br>
+      <span *ngIf="isValid('Comments')">Name is required</span>
+      </div>
+          <a>
+              <button type="submit" id="signin" class="btn btn-default" (click)="carRating()" [disabled]="!ratingForm.valid">Submit</button>
+          </a>
+          <br>
+          <br>
+          <p style="font-weight: normal;">alredy a customer? <a href="cust-rating"> Click here</a></p>
+   
+   </div>
+  </form>
+   
+  </body>
+
+   <app-footer></app-footer>
